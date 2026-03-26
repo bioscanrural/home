@@ -50,7 +50,33 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .section-padding { padding: 120px 0; }
+        .section-padding { padding: 80px 0; }
+        
+        /* Caja SENASA */
+        .senasa-box {
+            background: linear-gradient(135deg, rgba(39, 169, 75, 0.05), rgba(39, 169, 75, 0.01));
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px auto 50px;
+            text-align: left;
+            box-shadow: 0 20px 40px rgba(39, 169, 75, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .senasa-box h3 {
+            color: var(--primary);
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+        }
+        .senasa-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
         
         /* Animaciones de Scroll */
         .reveal {
@@ -451,7 +477,7 @@
         .ta-content h2 { color: white; font-size: 36px; margin-bottom: 20px; }
         .ta-content p { color: rgba(255,255,255,0.7); font-size: 18px; line-height: 1.7; margin-bottom: 30px; }
         .ta-image { position: relative; z-index: 2; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid var(--glass-border); }
-        .ta-image img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+        .ta-image img { width: 100%; display: block; aspect-ratio: auto; max-height: 450px; object-fit: contain; background-color: var(--white); }
 
         /* ================= NOSOTROS ================= */
         .nosotros { background: var(--light-bg); }
@@ -552,6 +578,11 @@
             .nosotros-inner { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
+            .section-padding { padding: 50px 0; }
+            .senasa-box { padding: 25px; margin: 30px auto; }
+            .senasa-box h3 { font-size: 22px; }
+            .hero { min-height: auto; padding-top: 120px; padding-bottom: 60px; }
+            .product-img-box { height: 180px; }
             .hero-content { grid-template-columns: 1fr; text-align: center; }
             .hero-badge { margin: 0 auto 30px; }
             .hero p { margin: 0 auto 40px; }
@@ -692,6 +723,15 @@
                 <p class="soluciones-text">TrackAgro es la única solución que une: lectores de caravanas electrónicas, sincronización en la nube, plataforma web de gestión, y soporte inmediato.</p>
             </div>
 
+            <div class="senasa-box reveal">
+                <h3>Único servicio de escaneo básico SENASA</h3>
+                <p>En BioscanRural brindamos una solución rápida y efectiva, pensada especialmente para pequeños productores.</p>
+                <p>Si necesitás realizar la guía de SENASA antes de cargar terneros u otros animales al camión, nosotros nos ocupamos: coordinamos una cita, realizamos el escaneo y generamos la guía lista para presentar.</p>
+                <p>De esta manera, evitás la compra de bastones electrónicos y simplificás todo el proceso.</p>
+                <p>Contamos con presupuestos accesibles y ofrecemos visitas mínimas de hasta 50 animales, adaptándonos a las necesidades de cada productor.</p>
+                <a href="https://wa.me/543437430240?text=Hola,%20quiero%20solicitar%20una%20cita%20y%20presupuesto%20para%20el%20servicio%20de%20escaneo%20SENASA" class="btn-glow btn-green" style="margin-top: 10px;" target="_blank">Solicitar cita y Presupuesto</a>
+            </div>
+
             <div class="solutions-layout reveal">
                 
                 <!-- Sidebar / Botones Izquierda -->
@@ -783,7 +823,7 @@
     <section class="section-padding products-section" id="productos">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Equipamiento Premium</h2>
+                <h2>Venta de equipamiento</h2>
                 <p>Todo lo que necesitás para modernizar tu establecimiento ganadero.</p>
             </div>
             
@@ -796,6 +836,7 @@
                         <span class="product-tag">Equipo Principal</span>
                         <h3>Bastón Electrónico</h3>
                         <p>Lector de caravanas de alta performance. Pantalla táctil, 12 hs de batería y sincronización automática con la nube.</p>
+                        <a href="https://wa.me/543437430240?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20Bastón%20Electrónico" class="btn-glow btn-green" style="padding: 12px 10px; font-size: 14px; font-weight: 600; margin-top: 20px; display: block; text-align: center; width: 100%; box-sizing: border-box;">Precios y Consultas</a>
                     </div>
                 </div>
 
@@ -807,6 +848,7 @@
                         <span class="product-tag">Equipamiento</span>
                         <h3>Visor de Balanza</h3>
                         <p>Indicador IoT de alta precisión. Conectado a TrackAgro, sincroniza peso con caravana automáticamente.</p>
+                        <a href="https://wa.me/543437430240?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20Visor%20de%20Balanza" class="btn-glow btn-green" style="padding: 12px 10px; font-size: 14px; font-weight: 600; margin-top: 20px; display: block; text-align: center; width: 100%; box-sizing: border-box;">Precios y Consultas</a>
                     </div>
                 </div>
 
@@ -818,17 +860,19 @@
                         <span class="product-tag">Identificación</span>
                         <h3>Caravanas Electrónicas</h3>
                         <p>Caravanas oficiales para identificación individual de bovinos. Compatibles con el bastón y el sistema nacional.</p>
+                        <a href="https://wa.me/543437430240?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20las%20Caravanas%20Electrónicas" class="btn-glow btn-green" style="padding: 12px 10px; font-size: 14px; font-weight: 600; margin-top: 20px; display: block; text-align: center; width: 100%; box-sizing: border-box;">Precios y Consultas</a>
                     </div>
                 </div>
 
                 <div class="product-card reveal tilt-card" style="transition-delay: 0.3s;">
                     <div class="product-img-box">
-                        <img src="https://picsum.photos/id/250/400/300" alt="Lector Panel Electrónico RFID">
+                        <img src="https://raw.githubusercontent.com/bioscanrural/imagenes/refs/heads/main/Captura%20panel.JPG" alt="Lector Panel Electrónico RFID">
                     </div>
                     <div class="product-info">
                         <span class="product-tag">Lo Nuevo</span>
                         <h3>Lector Panel RFID</h3>
                         <p>Ideal para mangas y camiones. Lectura rápida y eficiente de múltiples caravanas electrónicas en movimiento.</p>
+                        <a href="https://wa.me/543437430240?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20Lector%20Panel%20RFID" class="btn-glow btn-green" style="padding: 12px 10px; font-size: 14px; font-weight: 600; margin-top: 20px; display: block; text-align: center; width: 100%; box-sizing: border-box;">Precios y Consultas</a>
                     </div>
                 </div>
             </div>
@@ -869,10 +913,7 @@
     <!-- COMPATIBILIDAD -->
     <section class="section-padding nosotros" id="compatibilidad" style="background-color: var(--white);">
         <div class="container nosotros-inner">
-            <div class="nos-img reveal">
-                <img src="https://raw.githubusercontent.com/bioscanrural/imagenes/refs/heads/main/trk_generic.png" alt="App TrackAgro Compatibilidad" style="object-fit: contain; background: var(--light-bg); padding: 20px; border-radius: 30px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
-            </div>
-            <div class="nos-content reveal" style="transition-delay: 0.2s;">
+            <div class="nos-content reveal">
                 <h4 style="color: var(--blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Compatibilidad</h4>
                 <h2>¿Ya tenés un lector RFID?</h2>
                 <p>Próximamente podrás descargar la app móvil de TrackAgro para Android, conectar tu lector RFID Bluetooth y obtener toda la funcionalidad de TrackAgro.</p>
@@ -888,23 +929,26 @@
                     </div>
                 </div>
             </div>
+            <div class="nos-img reveal" style="transition-delay: 0.2s;">
+                <img src="https://raw.githubusercontent.com/bioscanrural/imagenes/refs/heads/main/trk_generic.png" alt="App TrackAgro Compatibilidad" style="object-fit: contain; background: var(--light-bg); padding: 20px; border-radius: 30px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
+            </div>
         </div>
     </section>
 
     <!-- NOSOTROS -->
     <section class="section-padding nosotros" id="nosotros">
-        <div class="container nosotros-inner">
-            <div class="nos-img reveal" style="box-shadow: none; background: transparent;">
-                <img src="https://raw.githubusercontent.com/bioscanrural/imagenes/refs/heads/main/ad3f7b39-8fa1-4ed8-bf82-3e9dcd929d7a.png" alt="Equipo Bioscan Rural" style="object-fit: contain; aspect-ratio: auto; max-height: 500px; margin: 0 auto;">
-            </div>
-            <div class="nos-content reveal" style="transition-delay: 0.2s;">
+        <div class="container nosotros-inner" style="grid-template-columns: 1fr; text-align: center;">
+            <div class="nos-content reveal">
                 <h4 style="color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Quiénes Somos</h4>
                 <h2>Bioscan Rural</h2>
-                <p>Somos el servicio líder en Argentina en escaneo de caravanas electrónicas ganaderas. Nacimos con la misión de llevar tecnología de punta al campo argentino, facilitando la gestión y trazabilidad del ganado.</p>
-                <p>Combinamos equipamiento de última generación con un servicio personalizado, llegando a donde sea necesario para que tu establecimiento esté siempre un paso adelante.</p>
-                <div class="nos-highlight">
+                <p style="max-width: 800px; margin: 0 auto 20px;">Somos el servicio líder en Argentina en escaneo de caravanas electrónicas ganaderas. Nacimos con la misión de llevar tecnología de punta al campo argentino, facilitando la gestión y trazabilidad del ganado.</p>
+                <p style="max-width: 800px; margin: 0 auto 20px;">Combinamos equipamiento de última generación con un servicio personalizado, llegando a donde sea necesario para que tu establecimiento esté siempre un paso adelante.</p>
+                <div class="nos-highlight" style="text-align: left; max-width: 800px; margin: 30px auto;">
                     <p>Somos los únicos en Argentina que brindan este servicio de escaneo de caravanas electrónicas de forma profesional y con cobertura nacional.</p>
                 </div>
+            </div>
+            <div class="nos-img reveal" style="transition-delay: 0.2s; box-shadow: none; background: transparent;">
+                <img src="https://raw.githubusercontent.com/bioscanrural/imagenes/refs/heads/main/ad3f7b39-8fa1-4ed8-bf82-3e9dcd929d7a.png" alt="Equipo Bioscan Rural" style="object-fit: contain; aspect-ratio: auto; max-height: 500px; margin: 0 auto;">
             </div>
         </div>
     </section>
@@ -915,15 +959,22 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>BioScan<span>Rural</span></h3>
-                    <p>Llevando la tecnología de precisión y la conectividad al corazón del campo argentino.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">
-                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <p>Comunidad Bioscan Rural</p>
+                    <div class="social-icons" style="display: flex; gap: 15px; margin-top: 15px; align-items: center;">
+                        <a href="https://instagram.com/bioscanrural" target="_blank" class="social-icon" title="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="#" class="social-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+                        <a href="https://facebook.com/bioscanrural" target="_blank" class="social-icon" title="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="https://tiktok.com/@bioscanrural" target="_blank" class="social-icon" title="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                        </a>
+                        <a href="https://youtube.com/@bioscanrural" target="_blank" class="social-icon" title="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
                         </a>
                     </div>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--primary);">@bioscanrural</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegación</h4>
